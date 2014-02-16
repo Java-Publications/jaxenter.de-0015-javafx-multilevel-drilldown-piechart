@@ -1,0 +1,15 @@
+package org.rapidpm.demo.jaxenter.blog0014.demologic.kotlin;
+
+import org.rapidpm.demo.jaxenter.blog0014.CDINotMapped;
+import org.rapidpm.demo.jaxenter.blog0014.demologic.DemoLogic;
+
+/**
+ * Created by ts40 on 29.01.14.
+ */
+@CDINotMapped
+public class DemoLogicKotlin implements DemoLogic {
+    @Override
+    public String workOnString() {
+        return "DemoLogicKotlin";
+    }
+}
