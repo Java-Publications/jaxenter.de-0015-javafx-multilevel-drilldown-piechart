@@ -14,28 +14,15 @@
  *    limitations under the License.
  */
 
-package gui.org.rapidpm.modul.javafx.chart.pie.drilldown;
+package demo;
 
-import org.rapidpm.commons.cdi.fx.components.CDIBaseAnchorPane;
+
+import javafx.scene.layout.AnchorPane;
 
 /**
  * User: Sven Ruppert
  * Date: 02.09.13
  * Time: 16:49
  */
-public class DrillDownPieChartPane extends CDIBaseAnchorPane<DrillDownPieChartPane, DrillDownPieChartPaneController> {
-
-    @Override public Class<DrillDownPieChartPane> getPaneClass() {
-        return DrillDownPieChartPane.class;
-    }
-
-//    @Inject DrillDownPieChartPaneController controller;
-//
-//    public DrillDownPieChartPaneController getController() {
-//        return controller;
-//    }
-//
-//    public void setController(DrillDownPieChartPaneController controller) {
-//        this.controller = controller;
-//    }
+public class DrillDownPieChartPane extends AnchorPane {
 }

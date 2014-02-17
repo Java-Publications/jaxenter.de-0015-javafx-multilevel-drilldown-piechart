@@ -14,9 +14,7 @@
  *    limitations under the License.
  */
 
-package gui.org.rapidpm.modul.javafx.chart.pie.drilldown.model;
-
-import javax.annotation.PostConstruct;
+package demo.model;
 
 /**
  * User: Sven Ruppert
@@ -25,16 +23,10 @@ import javax.annotation.PostConstruct;
  */
 public class TransientDemoDataRow {
 
-
     private String vorname;
     private String nachname;
     private String datum;
     private Double betrag;
-
-    @PostConstruct
-    public void init() {
-
-    }
 
     public String getVorname() {
         return vorname;

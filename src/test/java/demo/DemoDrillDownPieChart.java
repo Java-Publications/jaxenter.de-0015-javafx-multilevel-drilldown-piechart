@@ -14,18 +14,16 @@
  *    limitations under the License.
  */
 
-package org.rapidpm.demo.jaxenter.blog0015;
+package demo;
 
-import javax.inject.Qualifier;
-import java.lang.annotation.*;
+import demo.model.TransientDemoDataRow;
+import org.rapidpm.demo.jaxenter.blog0015.chart.DrillDownPieChart;
 
 /**
  * User: Sven Ruppert
- * Date: 12.08.13
- * Time: 09:32
+ * Date: 02.09.13
+ * Time: 17:00
  */
-@Qualifier
-@Retention(value = RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER, ElementType.TYPE})
-public @interface CDINotMapped {
+public class DemoDrillDownPieChart extends DrillDownPieChart<TransientDemoDataRow> {
+    //additional if needed
 }

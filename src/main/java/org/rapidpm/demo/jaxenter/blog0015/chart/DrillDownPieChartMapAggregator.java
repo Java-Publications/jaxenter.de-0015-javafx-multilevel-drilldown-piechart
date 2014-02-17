@@ -14,18 +14,19 @@
  *    limitations under the License.
  */
 
-package org.rapidpm.modul.javafx.chart.pie.drilldown;
+package org.rapidpm.demo.jaxenter.blog0015.chart;
+
+import org.rapidpm.demo.jaxenter.blog0015.MapAggregator;
 
 import java.util.List;
 
-import org.rapidpm.commons.cdi.aggregator.MapAggregator;
 
 /**
  * User: Sven Ruppert
  * Date: 02.09.13
  * Time: 16:01
  */
-public abstract class DrillDownPieChartMapAggregator<T> extends MapAggregator<T, String> {
+public abstract class DrillDownPieChartMapAggregator<T> implements MapAggregator<T, String> {
 
     /**
      * Calculate the Value for the PiChart.Data based on the aggregated values
@@ -54,19 +55,11 @@ public abstract class DrillDownPieChartMapAggregator<T> extends MapAggregator<T,
     }
 
     public boolean isLastOne() {
-        if (nextLevelAggregator == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return nextLevelAggregator == null;
     }
 
     public boolean isFirstOne() {
-        if (parentLevelAggregator == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return parentLevelAggregator == null;
     }
 
 }

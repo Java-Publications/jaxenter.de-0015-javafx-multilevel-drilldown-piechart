@@ -14,12 +14,9 @@
  *    limitations under the License.
  */
 
-package gui.org.rapidpm.modul.javafx.chart.pie.drilldown;
+package demo;
 
-import javax.enterprise.inject.Instance;
-import javax.inject.Inject;
-
-import gui.org.rapidpm.modul.javafx.chart.pie.drilldown.model.TransientDemoDataRow;
+import demo.model.TransientDemoDataRow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -29,8 +26,6 @@ import javafx.collections.ObservableList;
  * Time: 09:36
  */
 public class DemoDataBuilder {
-
-    private @Inject Instance<TransientDemoDataRow> rowInstance;
 
     public ObservableList<TransientDemoDataRow> create() {
         final ObservableList<TransientDemoDataRow> observableList = FXCollections.observableArrayList();
@@ -52,8 +47,10 @@ public class DemoDataBuilder {
         return observableList;
     }
 
-    private void createRow(ObservableList<TransientDemoDataRow> observableList, String vorname, String nachname, String datum, double betrag) {
-        final TransientDemoDataRow dataRow = rowInstance.get();
+    private void createRow(ObservableList<TransientDemoDataRow> observableList,
+                           String vorname, String nachname,
+                           String datum, double betrag) {
+        final TransientDemoDataRow dataRow = new TransientDemoDataRow();
         dataRow.setVorname(vorname);
         dataRow.setNachname(nachname);
         dataRow.setDatum(datum);
